@@ -1,0 +1,585 @@
+@font-face {
+	font-family: 'Conv_ZapfChancery';
+	src: url('../fonts/ZapfChancery.eot');
+	src: url('../fonts/ZapfChancery.woff') format('woff'), url('../fonts/ZapfChancery.ttf') format('truetype'), url('../fonts/ZapfChancery.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+*{
+    font-family: 'Conv_ZapfChancery';
+    color: #7b0909;
+/*    border: solid 1px gray;*/
+}
+
+.row {
+    display:flex;
+}
+
+.flex7 {
+    flex: 7;
+}
+
+.flex6 {
+    flex: 6;
+}
+
+.flex5 {
+    flex: 5;
+}
+
+.flex4 {
+    flex: 4;
+}
+
+.flex3 {
+    flex: 3;
+}
+.flex2 {
+    flex: 2;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.all {
+    padding-top: 10px;
+    min-width: 1000px;
+    max-width: 1600px;
+    width: 80%;
+}
+
+.header-size {
+    min-height: 370px;
+}
+
+.header {
+    min-height: 170px;
+    align-items: stretch;
+}
+
+.clicker{
+    position:relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.clicker:hover{
+    transform: scale(1.1, 1.1);
+    transition: transform .2s;
+}
+
+a:hover + .circle {
+    background: url(../images/menu_back.png) no-repeat;
+    background-size: 100px;
+    width: 100px;
+    height: 76px;
+    margin: 0 auto;
+}
+
+a.head:hover + .circle {
+    position: relative;
+    left:2.7px;
+    bottom:100px;
+    z-index: 1;
+}
+
+a.about:hover + .circle {
+    position: relative;
+    left:2.5px;
+    bottom:100px;
+    z-index: 1;
+}
+
+a.donate:hover + .circle{
+    position: relative;
+    left:1.2px;
+    bottom:98px;
+    z-index: 1;
+}
+
+a.forum:hover + .circle {
+    position: relative;
+    left: 1px;
+    bottom: 99px;
+    z-index: 1;
+}
+
+a.stat:hover + .circle {
+    position: relative;
+    left: 0.9px;
+    bottom: 105px;
+    z-index: 1;
+}
+
+a.head{
+    position: relative;
+    display: block;
+    background: url(../images/head.png) center no-repeat;
+    background-size: contain;
+    min-height: 90px;
+    min-width: 90px; 
+    margin: auto 10px;
+    z-index: 2;
+}
+
+a.about{
+    display: block;
+    background: url(../images/about.png) center no-repeat;
+    background-size: contain;
+    min-height: 90px;
+    min-width: 90px;
+    margin: auto 10px;
+}
+
+a.donate{
+    position: relative;
+    display: block;
+    background: url(../images/donate.png) center no-repeat;
+    background-size: contain;
+    min-height: 90px;
+    min-width: 90px;
+    margin: auto 10px;
+}
+
+a.forum{
+    display: block;
+    background: url(../images/forum.png) center no-repeat;
+    background-size: contain;
+    min-height: 90px;
+    min-width: 90px;
+    margin: 0px 10px 0px 10px;
+}
+
+a.stat{
+    display: block;
+    background: url(../images/stat.png) center no-repeat;
+    background-size: 110px;
+    min-height: 96px;
+    min-width: 90px;
+    margin: 0px 10px 0px 10px;
+}
+
+a.lk{
+    display: block;
+    position: absolute;
+    background: url(../images/lk.png) center no-repeat;
+    background-size: contain;
+    min-height: 60px;
+    min-width: 60px;
+    width: 100%;
+    margin: 0 auto;
+    top: 117px;
+    right: 5px;
+}
+
+.chein{
+    display: block;
+    position: absolute;
+    background: url(../images/lkchein.png) center top no-repeat;
+    background-size: contain;
+    min-height: 25px;
+    min-width: 3px;
+    width: 100%;
+    top: 90px;
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+    min-width: 1000px;
+    min-height: 1100px;
+    height: 100vh;
+}
+
+ul {
+   padding-left: 10px;
+}
+
+li {
+    position: relative;
+    flex:1;
+    list-style: none;
+    flex-basis: auto;
+}
+
+.main-bottom {
+    min-height: 160px;
+}
+
+.logo {
+    background: url("../images/logo.png") top center no-repeat;
+    background-size: 20em;
+    min-width: 310px;
+    min-height: 152px;
+}
+
+.new-game a{
+    display: block;
+    background: url("../images/newgame.png") no-repeat;
+    background-size: 87pt;
+    width: 7em;
+    min-height: 8.3em;
+    margin: 0 auto;
+    animation: newGame infinite 7s backwards 5s;
+}
+
+@keyframes newGame {
+    from,
+    to 55%{
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    65% {
+        transform: rotate(-30deg);
+    }
+    70% {
+        transform: rotate(30deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    80% {
+        transform: rotate(30deg);
+    }
+    85% {
+        transform: rotate(-30deg);
+    }
+    90% {
+        transform: rotate(30deg);
+    }
+    95% {
+        transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+    
+    
+}
+
+.new-game a:hover{
+    background: url("../images/newgame_push.png") no-repeat;
+    width: 7em;
+    min-height: 8.3em;
+    animation: newGame paused;
+}
+
+.online-block {
+    align-self: baseline;
+    align-items: baseline;
+    height: 110px;
+    text-align:center;
+}
+
+.serv-name a, .serv-name {
+    font-size: 1.1em;
+    color: #92222c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.serv-online {
+    font-weight: bold;
+    font-size: 1.3em;
+    color:#7b131d;
+}
+
+.online {
+    display: block;
+    background: url(../images/on.png) no-repeat;
+    height: 45px;
+    width: 45px;
+}
+
+.offline {
+    display: block;
+    background: url(../images/off.png) no-repeat;
+    height: 45px;
+    width: 45px;
+}
+
+.top-name {
+    font-style: normal;
+    font-family: 'Corbel';
+    font-variant: small-caps;
+    font-size: 2.3em;
+    transform: scaley(1.2);
+    text-shadow: 2px 2px 2px black;
+    color: orange;
+}
+
+.top {
+    align-items: center;
+    align-self: center;
+    width: 300px;
+    height: 370px;
+}
+
+.top-main {
+	max-height: 70px;
+}
+
+.button-top {
+    min-width: 0px;
+}
+
+#pvp {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+}
+
+#pk {
+    background: rgba(0, 0, 0, .6);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+}
+
+.top-pvp , .top-pk {
+    position: relative;
+    display: block;
+    min-width: 150px;
+/*    height: 60px;*/
+    font-style: normal;
+    font-family: 'Times New Roman';
+    font-size: 1.7em;
+    line-height: 1.5em;
+    text-shadow: 2px 2px 2px black;
+    color: orange;
+    text-decoration: none;
+    text-align: center;
+}
+
+.top-pk a:hover, .top-pvp a:hover {
+    position: relative;
+    color: orangered;
+}
+
+.top-list {
+    position: absolute;
+    width: 270px;
+    height: 255px;
+    background: #000;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    opacity: .6;
+    padding: 15px;
+}
+
+.main-name {
+    position: relative;
+    font-family: 'Times New Roman';
+    font-size: 1.2em;
+    color: orange;
+    width: 180px;
+    text-align: left;
+    padding: 15px 0 0 20px;
+}
+
+.main-point {
+    position: relative;
+    font-family: 'Times New Roman';
+    width:100px;
+    color: orange;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.name {
+    position: relative;
+    color: #e7cd90;
+    width: 200px;
+	font-size: 0.8em;
+    text-align: left;
+    padding: 0 0 10px 20px;
+}
+
+.point {
+    position: relative;
+    width: 70px;
+    color: #e7cd90;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+.content {
+    align-items: center;
+    align-self: stretch;
+    min-height: 370px;
+}
+
+.news-dir {
+    position: relative;
+    align-items: center;
+    align-self: center;
+}
+
+.news {
+    position: relative;
+    background: rgba(255, 255, 255, 0.26);
+    height: 370px;
+	width: 530px;
+    padding: 0 50px;
+    top:0;
+    left:0;
+}
+
+.top-news {
+    position: relative;
+    top:0px;
+    left:0px;
+    z-index: 2;
+    color: black;
+    font-family: 'Conv_ZapfChancery';
+    font-weight: normal;
+	font-style: normal;
+    font-size: 1.1em;
+    text-shadow: 0px 1px 0px white;
+    border-bottom: 2px solid #00000075;
+    width: 530px;
+    text-align: center;
+}
+
+.book {
+    display: inline-block;
+    background: url(../images/book.png) no-repeat;
+    width: 28px;
+    height: 28px;
+    margin: 5px 6px -7px 10px;
+}
+
+.news-icon {
+    position: relative;
+    display: inline-block;
+    background: url(../images/newsicon.png) no-repeat;
+    width: 56px;
+    height: 56px;
+    z-index: 2;
+    top: 5px;
+}
+
+.news-link, p {
+    display: inline-block;
+    color: #7b0909;
+}
+
+.news-link a{
+    position: relative;
+    z-index: 2;
+    color: #7b0909;
+    font-family: 'Arial';
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.date-news {
+    display: block;
+    color:black;
+    position: relative;
+    z-index: 2;
+    font-family: 'Arial';
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.news-post {
+    position: relative;
+    padding: 5px 0;
+    border-bottom: dotted 2px black;
+}
+
+.block-forum {
+    align-self: center;
+}
+
+.forum-news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 60px;
+    min-width: 650px;
+}
+
+.autor-news {
+    display: inline-block;
+    position: relative;
+    bottom:40px;
+    
+}
+
+.autor-news a{
+    color:red;
+    font-family: 'Arial';
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.forum-icon {
+    display: inline-block;
+    position: relative;
+    background: url(../images/scroll.png) no-repeat;
+    height: 45px;
+    width: 40px;
+    top: 0px;
+    margin-bottom: 5px ;
+}
+
+.forum-news-link {
+    position: relative;
+    display: block;
+    max-width: 280px;
+    width: 100%;
+    max-height: 50px;
+    overflow: hidden;
+    margin: 5px 20px;
+}
+
+.forum-news-link > a {
+    display: block;
+    position: relative;
+    color: #673737;
+    font-family: 'Arial';
+    font-size: 0.9em;
+    font-weight: bold;
+    bottom: 37px;
+    left: 53px;
+    white-space: pre;
+}
+
+.tops {
+    flex:1;
+    font-family: 'Arial';
+    line-height: 2em;
+    background: white;
+    border: 1px solid #5b646b;
+    max-width: 88px;
+    height: 31px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.partner {
+    position: relative;
+    background: url(../images/partner.png) no-repeat;
+    width: 103px;
+    height: 103px;
+    top:130px;
+    opacity: .6;
+}
